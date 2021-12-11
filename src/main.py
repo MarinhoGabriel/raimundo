@@ -5,10 +5,10 @@ MENU = \
 """
 Bem-vindo ao sistema de notas 2000.
 As possíveis operações são:
-cn - cadastrar nota(matricula, disciplina, nota)
-bn - bucar nota(matricula, disciplina)
-bs - buscar notas(matricula)
-cr - consultar cr(matricula)
+rg - cadastrar nota(matricula, disciplina, nota)
+gg - bucar nota(matricula, disciplina)
+ga - buscar notas(matricula)
+ac - consultar cr(matricula)
 """
 
 def command_handler(operations, command):
@@ -18,10 +18,10 @@ def command_handler(operations, command):
 
 with xmlrpc.client.ServerProxy("http://localhost:9001/") as proxy:
     operations = {}
-    operations["cn"] = proxy.register_grade
-    operations["bn"] = proxy.get_grade
-    operations["bs"] = proxy.get_all_grades
-    operations["cr"] = proxy.get_ac
+    operations["rg"] = proxy.register_grade
+    operations["gg"] = proxy.get_grade
+    operations["ga"] = proxy.get_all_grades
+    operations["ac"] = proxy.get_ac
     
     print(MENU)
     
