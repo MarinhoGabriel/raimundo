@@ -22,7 +22,7 @@ The server has 4 functions, at first, related to the grading system: `register_g
 
 ## The client
 The client is quite simple: it counts with a terminal interface with some operations. Each operation is related to a server function: 
-```python
+```python3
 {rg: register_grade(),
  gg: get_grade(),
  ga: get_all_grades(),
@@ -31,13 +31,13 @@ The client is quite simple: it counts with a terminal interface with some operat
 
 ## Running 
 In a terminal, we gotta run 
-```python3
-python3 src/server.py
+```console
+~ python3 src/server.py
 ```
 to start the server. A message like `To shutdown the server, press CTRL + C` should appear on the terminal window, indicating how to shut the server down.
 Once the server is started, we gotta open a new terminal and type
-```python3
-python3 src/client.py
+```console
+~ python3 src/client.py
 ```
 to start the client console. A message like 
 ```
